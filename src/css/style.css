@@ -1,0 +1,49 @@
+.moving-icon {
+    position: relative;
+    right: 0;
+    opacity: 0;
+    animation: moveAndFade 3s infinite;
+}
+
+.icon1 {
+    animation-delay: 1.2s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon2 {
+    animation-delay: 2s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon3 {
+    animation-delay: 3s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon4 {
+    animation-delay: 1.8s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon5 {
+    animation-delay: 2.5s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+@keyframes moveAndFade {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        left: 90%;
+        opacity: 0;
+
+    }
+}
