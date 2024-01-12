@@ -90,9 +90,6 @@ const Header = () => {
                                 Repositories
                             </a>
 
-                            <svg class="animate-bounce w-6 h-6 ">
-                            </svg>
-
                         </div>
 
 
