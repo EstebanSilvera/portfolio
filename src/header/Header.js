@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { TbHexagonLetterE } from "react-icons/tb";
 
+
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +79,7 @@ const Header = () => {
                             </a>
 
                             <a
-                                href="#"
+                                href="/aboutme"
                                 className="text-white hover:text-gray-400 px-2 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline"
                             >
                                 about me

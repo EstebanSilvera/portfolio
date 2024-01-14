@@ -13,42 +13,48 @@ const Home = () => {
     return (
         <div>
 
-            <div className='container md:mx-auto px-2 md:my-36 '>
+            <div className='container md:mx-auto px-2 md:py-36'>
 
                 <div className='container md:flex md:justify-between md:items-center'>
 
-                    <div>
+                    <div className='z-50'>
                         <h1 className='md:text-2xl font-sans text-cyan-500 py-1 '>Hi there! 👋, my name is</h1>
 
-                        <h1 className='md:text-5xl text-white font-mono py-1'>Esteban Silvera Scaldaferro</h1>
+                        <h1 className='md:text-5xl text-white font-mono py-1 letras'>Esteban Silvera Scaldaferro</h1>
 
-                        <h1 className='md:text-5xl text-white font-mono py-1'>I create and build web applications</h1>
+                        <h3 className='md:text-4xl text-white font-mono py-1'>I create and build web applications</h3>
 
                         <p className='text-xl text-white py-4'>
-                            Knowledge in backend and frontend, also in HTML, CSS, JavaScript,
-                            with handling of several <br /> frameworks and libraries,creativity
-                            for web design and effective adaptationto programming languages,<br />
+                            Knowledge in backend and frontend, also with handling of several frameworks and libraries,<br />
+                            creativity for web design and effective adaptation to programming languages,<br />
                             able to design, develop, test, implement, maintain and improve any software application.</p>
                     </div>
                     <div>
-                        <div className='bg-transparent absolute flex justify-between items-center pt-2 ' >
+                        <div className='bg-transparent absolute flex justify-between items-center pt-2 z-50' >
 
-                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' style={{animationDelay:"3s"}}/>
+                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' style={{ animationDelay: "3s" }} />
 
-                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{animationDelay:"4s"}} />
-                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce'  style={{animationDelay:"5s"}}/>
-                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce'  style={{animationDelay:"6s"}}/>
-                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce'  style={{animationDelay:"7s"}}/>
-                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce'  style={{animationDelay:"2s"}}/>
-                            <FaBootstrap className='text-cyan-500 size-16 md:mx-4 absolute top-40 animate-bounce' style={{animationDelay:"1s"}} />
-
-                        </div>
-
-                        <div className='rounded-2xl shadow-2xl object-cover z-0 w-full'>
-
-                            <img src={gif} alt='gif' className='rounded-2xl w-full ' />
+                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "4s" }} />
+                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "5s" }} />
+                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "6s" }} />
+                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "7s" }} />
+                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce' style={{ animationDelay: "2s" }} />
+                            <FaBootstrap className='text-cyan-500 size-16 md:mx-4 absolute top-40 animate-bounce' style={{ animationDelay: "1s" }} />
 
                         </div>
+
+                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{top:"10vh", right:"40vh"}}> </div>
+
+                        <div className='relative z-40'>
+
+                            <div className='rounded-2xl shadow-2xl w-full '>
+
+                                <img src={gif} alt='gif' className='rounded-2xl w-full' />
+
+                            </div>
+                        </div>
+
+                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{top:"40vh", right:"10vh"}}> </div>
 
                     </div>
                 </div>
@@ -56,8 +62,7 @@ const Home = () => {
             </div >
 
 
-
-            <div className='container md:mx-auto px-2'>
+            <div className='container md:mx-auto px-2 py-40'>
 
                 <div className='md:flex md:justify-center items-center'>
 
@@ -94,7 +99,7 @@ const Home = () => {
 
                         <GrMysql className='moving-icon icon3 text-white size-16 mx-4 absolute ' />
 
-                        
+
 
 
                     </div>
