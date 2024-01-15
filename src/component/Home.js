@@ -32,13 +32,13 @@ const Home = () => {
                     <div>
                         <div className='bg-transparent absolute flex justify-between items-center pt-2 z-50' >
 
-                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' style={{ animationDelay: "3s" }} />
+                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' style={{ animationDelay: "5s" }} />
 
-                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "4s" }} />
-                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "5s" }} />
-                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "6s" }} />
-                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "7s" }} />
-                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce' style={{ animationDelay: "2s" }} />
+                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "7s" }} />
+                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "9s" }} />
+                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "11s" }} />
+                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "13s" }} />
+                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce' style={{ animationDelay: "3s" }} />
                             <FaBootstrap className='text-cyan-500 size-16 md:mx-4 absolute top-40 animate-bounce' style={{ animationDelay: "1s" }} />
 
                         </div>
