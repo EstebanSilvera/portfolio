@@ -52,12 +52,12 @@ const Aboutme = () => {
         </div>
 
         {/* img con referencia a mi */}
-        <div>
+        <div className='w-96'>
 
           <img src={img} alt='img' className='rounded-full size-40 mx-auto shadow-2xl shadow-white' />
 
-          <h2 className='flex py-10 text-xl text-white'>
-            <RiDoubleQuotesL />Todo lo que imaginas, puedes crearlo<RiDoubleQuotesR />
+          <h2 className='flex py-10 px-10 text-xl text-white text-center'>
+            <RiDoubleQuotesL />La programación es como la magia, pero más específica.<RiDoubleQuotesR />
           </h2>
 
         </div>
@@ -65,7 +65,7 @@ const Aboutme = () => {
 
 
         {/* informacion de como contactarme */}
-        <div className='w-96 '>
+        <div className='w-96 px-10'>
 
           <h1 className='text-4xl text-cyan-500 '>Contact</h1>
 
@@ -88,15 +88,31 @@ const Aboutme = () => {
       </div>
 
       {/* lineas */}
-      {/* <div className="absolute border-2 border-white h-60 z-50" style={{ top: "435px", right: "31.5vw" }}></div>
-      <div className="absolute border-2 border-white w-40 z-50" style={{ top: "71%", right: "32%" }}></div>
 
-      <div className="absolute border-2 border-white w-48 z-50" style={{ top: "79%", right: "30%" }}></div>
-      <div className="absolute border-2 border-white h-44 z-50" style={{ top: "79%", right: "30%" }}></div>
+      {/* contact */}
+      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"11vw", top: "675px", right: "29.5vw" }}></div>
 
-      <div className="absolute border-2 border-white h-6 z-50" style={{ top: "55%" }}></div>
-      <div className="absolute border-2 border-white z-50" style={{ top: "55%", left: "24%", width: "31rem" }}></div>
-      <div className="absolute border-2 border-white h-8 z-50" style={{ top: "52%", left: "24%" }}></div> */}
+      {/* skills */}
+      <div className="2xl:absolute 2xl:border-2 border-white h-44 z-50" style={{ top: "750px", right: "29.5vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"11vw", top: "750px", right: "29.5vw" }}></div>
+
+      {/* experiences */}
+      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-5 z-50" style={{ top: "500px", left:"23.8vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "25.7vw", top: "520px", left: "24%" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-8 z-50" style={{ top: "520px", left: "49.5vw" }}></div>
+
+      {/* foto */}
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{height:"21.5rem", top: "250px", right:"39vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "5vw", top: "250px", right: "39vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "1.5vw", top: "592px", right: "39vw" }}></div>
+
+      {/* hobbies */}
+      <div className="2xl:absolute 2xl:border-2 border-white h-80 z-50" style={{ top: "640px", left: "17vw" }}></div>
+      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"23vw", top: "640px", left: "17vw" }}></div>
+
+      {/* education */}
+      <div className="2xl:absolute 2xl:border-2 border-white h-64 z-50" style={{ top: "780px", left: "43vw" }}></div>
 
 
       {/* Centro de las imagenes */}
@@ -145,7 +161,7 @@ const Aboutme = () => {
 
           <div className='flex py-5 text-white'>
             <div className='flex justify-center items-center '>
-              <FaCode className='size-16' /><h3 className='text-xl text-center px-6'>codificar</h3>
+              <FaCode className='size-16' /><h3 className='text-xl text-center px-6'>encode</h3>
             </div>
             <div className='flex justify-center items-center'>
               <MdDesignServices className='size-16' /><h3 className='text-xl px-6'>desing</h3>
