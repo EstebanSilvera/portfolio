@@ -1,51 +1,66 @@
 import React from 'react'
-import img from "../img/img.gif"
+import { useState, useEffect } from 'react';
+import img from "../img/foto.png"
+import binario from "../img/binario.gif"
 import { GrMapLocation } from "react-icons/gr";
 import { MdOutlinePhoneAndroid, MdOutlineEmail, MdDesignServices } from "react-icons/md";
-import { FaLinkedin, FaGithub, FaRegHandPointRight } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaRegHandPointRight, FaHeadphonesAlt, FaBook, FaReact, FaAngular, FaVuejs, FaCode, FaPython } from "react-icons/fa";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import { FaHeadphonesAlt, FaBook } from "react-icons/fa";
 import { GiLaptop } from "react-icons/gi";
 import { BsSuitcaseLg, BsMouse3 } from "react-icons/bs";
 import { LiaIdCardSolid } from "react-icons/lia";
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { SiCircuitverse } from "react-icons/si";
 import { CgGames } from "react-icons/cg";
-
-import { FaReact, FaAngular, FaVuejs, FaCode } from "react-icons/fa";
+import { TbSql } from "react-icons/tb";
 
 
 
 const Aboutme = () => {
+
+  const [isDown, setIsMobile] = useState(window.innerWidth <= 1536);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 1536);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div>
 
-      <div className='container flex justify-evenly items-center mx-auto p-10'>
+      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10'>
 
 
         {/* Experiencias */}
         <div className=' w-96'>
-          <h1 className='text-4xl text-cyan-500'>Experience and <br />achivetmenst</h1>
+          <h1 className='text-4xl text-center text-cyan-500'>EXPERIENCE AND ACHIVETMENST</h1>
 
           <div className='text-white'>
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Winner in presentation of projects with bullying applications.</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Winner in presentation of projects with bullying applications.</h3>
             </div>
 
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Creation of the "Inventario" web application for the company Automotive Fujiyama.</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Creation of the "Inventario" web application for the company Automotive Fujiyama.</h3>
             </div>
 
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Frameworks and libreries like angular, React, Vue, nodejs.</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Frameworks and libreries like angular, React, Vue, nodejs.</h3>
             </div>
 
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Knowledge of Frontend and Backend</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Knowledge of Frontend and Backend</h3>
             </div>
 
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6' /><h3 className='size-full'>database management such as mysql, dbeaver and sql language</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Database management such as mysql, dbeaver and sql language</h3>
             </div>
           </div>
 
@@ -54,7 +69,9 @@ const Aboutme = () => {
         {/* img con referencia a mi */}
         <div className='w-96'>
 
-          <img src={img} alt='img' className='rounded-full size-40 mx-auto shadow-2xl shadow-white' />
+          <div className='rounded-full size-52 mx-auto shadow-2xl shadow-white z-0 border-2 border-white' style={{ backgroundImage: `url(${binario})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <img src={img} alt='img' className='relative bottom-10 left-5 z-50' style={{ height: "120%" }} />
+          </div>
 
           <h2 className='flex py-10 px-10 text-xl text-white text-center'>
             <RiDoubleQuotesL />La programación es como la magia, pero más específica.<RiDoubleQuotesR />
@@ -67,7 +84,7 @@ const Aboutme = () => {
         {/* informacion de como contactarme */}
         <div className='w-96 px-10'>
 
-          <h1 className='text-4xl text-cyan-500 '>Contact</h1>
+          <h1 className='text-4xl text-cyan-500 '>CONTACT</h1>
 
           <div className='text-white'>
 
@@ -90,29 +107,39 @@ const Aboutme = () => {
       {/* lineas */}
 
       {/* contact */}
-      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"11vw", top: "675px", right: "29.5vw" }}></div>
+      {!isDown
 
-      {/* skills */}
-      <div className="2xl:absolute 2xl:border-2 border-white h-44 z-50" style={{ top: "750px", right: "29.5vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"11vw", top: "750px", right: "29.5vw" }}></div>
+        ?
+        <>
+          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "675px", right: "29.5vw" }}></div>
 
-      {/* experiences */}
-      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-5 z-50" style={{ top: "500px", left:"23.8vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "25.7vw", top: "520px", left: "24%" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-8 z-50" style={{ top: "520px", left: "49.5vw" }}></div>
+          {/* // skills */}
+          <div className="2xl:absolute 2xl:border-2 border-white h-44 z-50" style={{ top: "750px", right: "29.5vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "750px", right: "29.5vw" }}></div>
 
-      {/* foto */}
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{height:"21.5rem", top: "250px", right:"39vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "5vw", top: "250px", right: "39vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "1.5vw", top: "592px", right: "39vw" }}></div>
+          {/* // experiences */}
+          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-5 z-50" style={{ top: "500px", left: "23.8vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "25.7vw", top: "520px", left: "24%" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-8 z-50" style={{ top: "520px", left: "49.5vw" }}></div>
 
-      {/* hobbies */}
-      <div className="2xl:absolute 2xl:border-2 border-white h-80 z-50" style={{ top: "640px", left: "17vw" }}></div>
-      <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{width:"23vw", top: "640px", left: "17vw" }}></div>
+          {/* // foto */}
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ height: "21.5rem", top: "250px", right: "39vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "5vw", top: "250px", right: "39vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "1.5vw", top: "592px", right: "39vw" }}></div>
 
-      {/* education */}
-      <div className="2xl:absolute 2xl:border-2 border-white h-64 z-50" style={{ top: "780px", left: "43vw" }}></div>
+          {/* // hobbies */}
+          <div className="2xl:absolute 2xl:border-2 border-white h-80 z-50" style={{ top: "640px", left: "17vw" }}></div>
+          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "22vw", top: "640px", left: "17vw" }}></div>
+
+          {/* // education */}
+          <div className="2xl:absolute 2xl:border-2 border-white h-60 z-50" style={{ top: "790px", left: "43vw" }}></div>
+        </>
+        :
+        <></>
+
+      }
+
 
 
       {/* Centro de las imagenes */}
@@ -139,32 +166,32 @@ const Aboutme = () => {
       </div>
 
 
-      <div className='flex justify-evenly items-center p-28'>
+      <div className='md:flex md:justify-evenly md:items-center md:p-28 px-2'>
 
         <div className='w-96'>
           <h1 className='text-4xl text-cyan-500 py-5'>HOBBIES</h1>
 
-          <h2 className='text-white'>I have many but these are some of the main ones</h2>
+          <h2 className='text-white pb-5'>I have many but these are some of the main ones</h2>
 
           <div className='flex justify-center items-center text-white'>
-            <GiWeightLiftingUp className='size-20' /><h3 className='text-xl'>workout</h3>
+            <GiWeightLiftingUp className='size-20' /><h3 className='text-xl'>Workout</h3>
           </div>
 
           <div className='flex py-5 text-white'>
             <div className='flex '>
-              <SiCircuitverse className='size-16' /><h3 className='text-xl text-center'>new technology  </h3>
+              <SiCircuitverse className='size-16' /><h3 className='text-xl text-center'>New technology  </h3>
             </div>
             <div className='flex '>
-              <CgGames className='size-16' /><h3 className='text-xl text-center'>play videogames </h3>
+              <CgGames className='size-16' /><h3 className='text-xl text-center'>Play videogames </h3>
             </div>
           </div>
 
           <div className='flex py-5 text-white'>
             <div className='flex justify-center items-center '>
-              <FaCode className='size-16' /><h3 className='text-xl text-center px-6'>encode</h3>
+              <FaCode className='size-16' /><h3 className='text-xl text-center px-6'>Encode</h3>
             </div>
             <div className='flex justify-center items-center'>
-              <MdDesignServices className='size-16' /><h3 className='text-xl px-6'>desing</h3>
+              <MdDesignServices className='size-16' /><h3 className='text-xl px-6'>Desing</h3>
             </div>
           </div>
 
@@ -174,14 +201,14 @@ const Aboutme = () => {
         <div className='w-96'>
           <h1 className='text-4xl text-cyan-500 py-5'>EDUCATION</h1>
 
-          <h2 className='text-2xl text-white'>Institucion universitaria ITSA</h2>
+          <h2 className='text-2xl text-white'>INSTITUCION UNIVERSITARIA ITSA</h2>
           <div className='flex py-1 text-white'>
-            <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Computer Systems Maintenance Technician</h3>
+            <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Computer Systems Maintenance Technician</h3>
           </div>
 
-          <h2 className='text-2xl text-white'>Institucion universitaria de barranquilla IU</h2>
+          <h2 className='text-2xl text-white'>INSTITUCION UNIVERSITARIA DE BARRANQUILLA IU</h2>
           <div className='flex py-1 text-white'>
-            <FaRegHandPointRight className='size-6' /><h3 className='size-full'>Technologist in Computer Systems Management</h3>
+            <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Technologist in Computer Systems Management</h3>
           </div>
 
         </div>
@@ -189,12 +216,14 @@ const Aboutme = () => {
         <div className='w-96'>
           <h1 className='text-4xl text-cyan-500 '>SKILLS</h1>
 
-          <h2 className='text-white'>Some skills of mine</h2>
+          <h2 className='text-white py-4'>Some skills of mine</h2>
 
           <div className='flex flex-wrap justify-center items-center'>
-            <FaReact className='size-40 text-white' />
-            <FaAngular className='size-40 text-white' />
-            <FaVuejs className='size-40 text-white' />
+            <FaReact className='size-24 text-white' />
+            <FaAngular className='size-24 text-white' />
+            <FaVuejs className='size-24  text-white' />
+            <FaPython className='size-24  text-white' />
+            <TbSql className='size-24  text-white' />
 
           </div>
 
