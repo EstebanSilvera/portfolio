@@ -4,7 +4,7 @@ import img from "../img/foto.png"
 import binario from "../img/binario.gif"
 import { GrMapLocation } from "react-icons/gr";
 import { MdOutlinePhoneAndroid, MdOutlineEmail, MdDesignServices } from "react-icons/md";
-import { FaLinkedin, FaGithub, FaRegHandPointRight, FaHeadphonesAlt, FaBook, FaReact, FaAngular, FaVuejs, FaCode, FaPython } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaRegHandPointRight, FaHeadphonesAlt, FaBook, FaReact, FaAngular, FaVuejs, FaCode, FaPython, FaNode } from "react-icons/fa";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { GiLaptop } from "react-icons/gi";
 import { BsSuitcaseLg, BsMouse3 } from "react-icons/bs";
@@ -15,13 +15,24 @@ import { CgGames } from "react-icons/cg";
 import { TbSql } from "react-icons/tb";
 
 
+const iconsOrder = [
+  <FaReact key="react" className='size-24 text-white m-2 ' />,
+  <FaAngular key="angular" className='size-24 text-white m-2' />,
+  <FaVuejs key="vue" className='size-24 text-white m-2' />,
+  <FaPython key="python" className='size-24 text-white m-2' />,
+  <FaNode key="node" className='size-24 text-white m-2' />,
+  <TbSql key="sql" className='size-24 text-white m-2' />,
+];
+
 
 const Aboutme = () => {
 
-  const [isDown, setIsMobile] = useState(window.innerWidth <= 1536);
+  const [isDown, setIsDown] = useState(window.innerWidth <= 1536);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1536);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 1536);
+    setIsDown(window.innerWidth <= 1536);
   };
 
   useEffect(() => {
@@ -32,14 +43,29 @@ const Aboutme = () => {
     };
   }, []);
 
+
+  const [icons, setIcons] = useState(iconsOrder);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Rotar los iconos cíclicamente
+      setIcons((prevIcons) => [
+        prevIcons[prevIcons.length - 1],
+        ...prevIcons.slice(0, prevIcons.length - 1),
+      ]);
+    }, 3000); // Cambia la velocidad de rotación según tus necesidades
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
 
-      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10'>
+      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10 px-2'>
 
 
         {/* Experiencias */}
-        <div className=' w-96'>
+        <div className={`w-96 ${isMobile ? "py-10" : ""}`}>
           <h1 className='text-4xl text-center text-cyan-500'>EXPERIENCE AND ACHIVETMENST</h1>
 
           <div className='text-white'>
@@ -67,7 +93,7 @@ const Aboutme = () => {
         </div>
 
         {/* img con referencia a mi */}
-        <div className='w-96'>
+        <div className='w-96 '>
 
           <div className='rounded-full size-52 mx-auto shadow-2xl shadow-white z-0 border-2 border-white' style={{ backgroundImage: `url(${binario})`, backgroundSize: "cover", backgroundPosition: "center" }}>
             <img src={img} alt='img' className='relative bottom-10 left-5 z-50' style={{ height: "120%" }} />
@@ -82,7 +108,7 @@ const Aboutme = () => {
 
 
         {/* informacion de como contactarme */}
-        <div className='w-96 px-10'>
+        <div className='w-96 px-10 '>
 
           <h1 className='text-4xl text-cyan-500 '>CONTACT</h1>
 
@@ -201,30 +227,25 @@ const Aboutme = () => {
         <div className='w-96'>
           <h1 className='text-4xl text-cyan-500 py-5'>EDUCATION</h1>
 
-          <h2 className='text-2xl text-white'>INSTITUCION UNIVERSITARIA ITSA</h2>
+          <h2 className='text-2xl text-white py-2'>INSTITUCION UNIVERSITARIA ITSA</h2>
           <div className='flex py-1 text-white'>
             <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Computer Systems Maintenance Technician</h3>
           </div>
 
-          <h2 className='text-2xl text-white'>INSTITUCION UNIVERSITARIA DE BARRANQUILLA IU</h2>
+          <h2 className='text-2xl text-white py-2'>INSTITUCION UNIVERSITARIA DE BARRANQUILLA IU</h2>
           <div className='flex py-1 text-white'>
             <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Technologist in Computer Systems Management</h3>
           </div>
 
         </div>
 
-        <div className='w-96'>
+        <div className={`w-96 ${isMobile ? "py-10" : ""}`}>
           <h1 className='text-4xl text-cyan-500 '>SKILLS</h1>
 
           <h2 className='text-white py-4'>Some skills of mine</h2>
 
-          <div className='flex flex-wrap justify-center items-center'>
-            <FaReact className='size-24 text-white' />
-            <FaAngular className='size-24 text-white' />
-            <FaVuejs className='size-24  text-white' />
-            <FaPython className='size-24  text-white' />
-            <TbSql className='size-24  text-white' />
-
+          <div className="flex flex-wrap justify-center items-center">
+            {icons.map((icon) => icon)}
           </div>
 
 
