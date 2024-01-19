@@ -67,60 +67,72 @@ const Repositories = () => {
 
             <div className='container mx-auto flex flex-wrap justify-evenly items-center m-5'>
 
-                <Link to="https://pokedex-mu-sepia.vercel.app/" >
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={pokedex} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+                <Link to="https://pokedex-mu-sepia.vercel.app/" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={pokedex} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">pokedex with tablet</h2>
+                            <p className="text-gray-600">This is the first application consuming the Pokémon API, and I added the pokedex to see the pokemon with their powers</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to="https://contador-alpha-coral.vercel.app/">
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={autoincrementar} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+                <Link to="https://contador-alpha-coral.vercel.app/" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={autoincrementar} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">Auto-incrementing counter</h2>
+                            <p className="text-gray-600">Was one of the first applications I made with react using hooks such as useState and useEffect.</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to="https://games-mocha-six.vercel.app/" >
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={games} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+                <Link to="https://games-mocha-six.vercel.app/" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={games} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">Gamer computer equipment store</h2>
+                            <p className="text-gray-600">It is a store which I added my first swisper and a responsive video. I think later I can add more features like a shopping cart and prices to all items, all this for any type of device without damaging the experience.</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to="https://inventario-3vre147k7-estebansilveras-projects.vercel.app/" >
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={inventario} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+                <Link to="https://inventario-3vre147k7-estebansilveras-projects.vercel.app/" className='py-4'>
+                    <div className=" mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={inventario} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">Inventory of computer and network equipment</h2>
+                            <p className="text-gray-600 overflow-hidden whitespace-normal break-words">This was the biggest project I have done and one of the most complete, it was one of the projects that I was implementing in a company in which I did business practices, which worked with a database with nodejs for connections, creating APIs.</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to="https://app-angular-omega.vercel.app/home" >
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={angular} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+                <Link to="https://app-angular-omega.vercel.app/home" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={angular} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">First application with Angular</h2>
+                            <p className="text-gray-600">This application was made with a seed project which taught us the basics and everything we needed to consume APIs in angular and the handling of the components. Using boostrap for design</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to="https://angular-covid.vercel.app/login">
-                    <div className='py-5 flex justify-center items-center' >
-                        <img src={covid} alt='pokedex' className='size-72 rounded-3xl border-2 border-cyan-500 w-full' />
-                        <div className='absolute mt-52 bg-transparent rounded-3xl backdrop-blur-sm px-20 py-4 text-center'>
-                            <p className='text-xl'>viva Pokemon mamaguevo</p>
+
+                <Link to="https://angular-covid.vercel.app/login" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={covid} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">Covid test</h2>
+                            <p className="text-gray-600">this was a test I had by consuming an excel which had covid information for the whole united states and made a filter for each state and city with graphical representation, the excel is in my github.</p>
                         </div>
                     </div>
                 </Link>
-
 
             </div>
 

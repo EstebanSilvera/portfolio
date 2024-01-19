@@ -1,6 +1,7 @@
 import React from 'react'
 import gif from '../img/gif-vector2.gif'
 import gifvector from '../img/gif-vector.gif'
+import { useState } from 'react';
 import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io";
 import { SiPostman, SiTailwindcss } from "react-icons/si";
 import { FaCss3Alt, FaBootstrap } from "react-icons/fa";
@@ -10,12 +11,15 @@ import '../css/style.css'
 
 
 const Home = () => {
+
+    const [colorRed, setColorRed] = useState(false)
+
     return (
         <div>
 
             <div className='container md:mx-auto px-2 md:py-36'>
 
-                <div className='container md:flex md:justify-between md:items-center'>
+                <div className='container md:flex md:justify-evenly md:items-center'>
 
                     <div className='z-50'>
                         <h1 className='md:text-2xl font-sans text-cyan-500 py-1 '>Hi there! 👋, my name is</h1>
@@ -32,29 +36,28 @@ const Home = () => {
                     <div>
                         <div className='bg-transparent absolute flex justify-between items-center pt-2 z-50' >
 
-                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' style={{ animationDelay: "5s" }} />
-
-                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "7s" }} />
-                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "9s" }} />
-                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "11s" }} />
-                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce' style={{ animationDelay: "13s" }} />
-                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce' style={{ animationDelay: "3s" }} />
-                            <FaBootstrap className='text-cyan-500 size-16 md:mx-4 absolute top-40 animate-bounce' style={{ animationDelay: "1s" }} />
+                            <IoLogoJavascript className='text-cyan-500 size-16 mx-4 animate-bounce' onMouseEnter={() => setColorRed(true)} style={{ animationDelay: "5s" }} />
+                            <IoLogoHtml5 className='text-cyan-500 size-16 md:mx-4 animate-bounce' onMouseEnter={() => setColorRed(true)}  style={{ animationDelay: "7s" }} />
+                            <FaCss3Alt className='text-cyan-500 size-16 md:mx-4 animate-bounce'onMouseEnter={() => setColorRed(true)}  style={{ animationDelay: "9s" }} />
+                            <GrMysql className='text-cyan-500 size-16 md:mx-4 animate-bounce' onMouseEnter={() => setColorRed(true)} style={{ animationDelay: "11s" }} />
+                            <SiPostman className='text-cyan-500 size-16 md:mx-4 animate-bounce'onMouseEnter={() => setColorRed(true)}  style={{ animationDelay: "13s" }} />
+                            <SiTailwindcss className='text-cyan-500 size-16 md:mx-4 absolute top-20 animate-bounce'onMouseEnter={() => setColorRed(true)}  style={{ animationDelay: "3s" }} />
+                            <FaBootstrap className='text-cyan-500 size-16 md:mx-4 absolute top-40 animate-bounce' onMouseEnter={() => setColorRed(true)} style={{ animationDelay: "1s" }} />
 
                         </div>
 
-                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{top:"10vh", right:"40vh"}}> </div>
+                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{ top: "13vh", right: "50vh" }}> </div>
 
                         <div className='relative z-40'>
 
-                            <div className='rounded-2xl shadow-2xl w-full '>
+                            <div className={`rounded-2xl shadow-2xl ${!colorRed ? 'hover:shadow-white' : "shadow-cyan-500"} transition duration-700 w-full `}>
 
-                                <img src={gif} alt='gif' className='rounded-2xl w-full' />
+                                <img src={gif} alt='gif' onMouseEnter={() => setColorRed(false)} className='rounded-2xl w-full' />
 
                             </div>
                         </div>
 
-                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{top:"40vh", right:"10vh"}}> </div>
+                        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm" style={{ top: "35vh", right: "15vh" }}> </div>
 
                     </div>
                 </div>

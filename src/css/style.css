@@ -71,3 +71,37 @@
         border-color: transparent;
     }
 }
+
+
+.movimientoRev {
+    animation-duration: 2s;
+    animation-name: slideinRev;
+}
+
+@keyframes slideinRev {
+    from {
+        opacity: 0;
+        margin-top: 100%;
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.aparecer {
+    animation-duration: 5s;
+    animation-name: aparicion;
+    animation-delay: hidden 10s ;
+}
+
+@keyframes aparicion {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

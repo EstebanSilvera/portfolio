@@ -58,14 +58,16 @@ const Aboutme = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+
   return (
     <div>
 
-      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10 px-2'>
+      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10 px-2 movimientoRev'>
 
 
         {/* Experiencias */}
-        <div className={`w-96 ${isMobile ? "py-10" : ""}`}>
+        <div className={`w-96 ${isMobile ? "py-10" : ""} `}>
           <h1 className='text-4xl text-center text-cyan-500'>EXPERIENCE AND ACHIVETMENST</h1>
 
           <div className='text-white'>
@@ -93,7 +95,7 @@ const Aboutme = () => {
         </div>
 
         {/* img con referencia a mi */}
-        <div className='w-96 '>
+        <div className='w-96'>
 
           <div className='rounded-full size-52 mx-auto shadow-2xl shadow-white z-0 border-2 border-white' style={{ backgroundImage: `url(${binario})`, backgroundSize: "cover", backgroundPosition: "center" }}>
             <img src={img} alt='img' className='relative bottom-10 left-5 z-50' style={{ height: "120%" }} />
@@ -137,29 +139,29 @@ const Aboutme = () => {
 
         ?
         <>
-          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "675px", right: "29.5vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "675px", right: "29.5vw" }}></div>
 
           {/* // skills */}
-          <div className="2xl:absolute 2xl:border-2 border-white h-44 z-50" style={{ top: "750px", right: "29.5vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "750px", right: "29.5vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white h-44 z-50" style={{ top: "750px", right: "29.5vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "750px", right: "29.5vw" }}></div>
 
           {/* // experiences */}
-          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-5 z-50" style={{ top: "500px", left: "23.8vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "25.7vw", top: "520px", left: "24%" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white 2xl:h-8 z-50" style={{ top: "520px", left: "49.5vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white 2xl:h-5 z-50" style={{ top: "500px", left: "23.8vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "25.7vw", top: "520px", left: "24%" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white 2xl:h-8 z-50" style={{ top: "520px", left: "49.5vw" }}></div>
 
           {/* // foto */}
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ height: "21.5rem", top: "250px", right: "39vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "5vw", top: "250px", right: "39vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "1.5vw", top: "592px", right: "39vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ height: "21.5rem", top: "250px", right: "39vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "5vw", top: "250px", right: "39vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "1.5vw", top: "592px", right: "39vw" }}></div>
 
           {/* // hobbies */}
-          <div className="2xl:absolute 2xl:border-2 border-white h-80 z-50" style={{ top: "640px", left: "17vw" }}></div>
-          <div className="2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "22vw", top: "640px", left: "17vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white h-80 z-50" style={{ top: "640px", left: "17vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "22vw", top: "640px", left: "17vw" }}></div>
 
           {/* // education */}
-          <div className="2xl:absolute 2xl:border-2 border-white h-60 z-50" style={{ top: "790px", left: "43vw" }}></div>
+          <div className="aparecer 2xl:absolute 2xl:border-2 border-white h-60 z-50" style={{ top: "790px", left: "43vw" }}></div>
         </>
         :
         <></>
@@ -171,7 +173,7 @@ const Aboutme = () => {
       {/* Centro de las imagenes */}
       <div className='container flex justify-center mx-auto text-white p-10 '>
 
-        <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 bg-cyan-500 rounded-full z-0 blur-2xl " style={{ top: "500px" }}> </div>
+        <div className="aparecer md:absolute md:w-96 md:h-96 border-2 border-cyan-500 bg-cyan-500 rounded-full z-0 blur-2xl " style={{ top: "500px" }}> </div>
 
         <div className='p-5 z-50'>
           <FaHeadphonesAlt className='size-20 my-5' />
