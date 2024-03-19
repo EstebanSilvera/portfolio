@@ -1,0 +1,112 @@
+.moving-icon {
+    position: relative;
+    right: 0;
+    opacity: 0;
+    animation: moveAndFade 3s infinite;
+}
+
+.icon1 {
+    animation-delay: 1.2s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon2 {
+    animation-delay: 2s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon3 {
+    animation-delay: 3s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon4 {
+    animation-delay: 1.8s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon5 {
+    animation-delay: 2.5s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+.icon3 {
+    animation-delay: 3.5s;
+    /* Ajusta el retraso según tus preferencias */
+}
+
+@keyframes moveAndFade {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        left: 90%;
+        opacity: 0;
+
+    }
+}
+
+.letras {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #18bdec;
+    animation: typing 5s steps(30) 1s normal both, blink 1s steps(1) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.movimientoRev {
+    animation-duration: 2s;
+    animation-name: slideinRev;
+}
+
+@keyframes slideinRev {
+    from {
+        opacity: 0;
+        margin-top: 100%;
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.aparecer {
+    animation-duration: 5s;
+    animation-name: aparicion;
+    animation-delay: hidden 10s ;
+}
+
+@keyframes aparicion {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
