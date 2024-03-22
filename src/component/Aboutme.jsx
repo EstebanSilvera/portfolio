@@ -48,12 +48,11 @@ const Aboutme = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Rotar los iconos cíclicamente
       setIcons((prevIcons) => [
         prevIcons[prevIcons.length - 1],
         ...prevIcons.slice(0, prevIcons.length - 1),
       ]);
-    }, 3000); // Cambia la velocidad de rotación según tus necesidades
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);

@@ -36,7 +36,7 @@ const Repositories = () => {
 
                 <div className='bg-white w-72 rounded-2xl relative md:bottom-24'>
 
-                    <p className='overflow-hidden whitespace-normal break-words p-6'>
+                    <p className='overflow-hidden whitespace-normal break-words p-6 text-center'>
                         hello, here you can see all the repositories and applications
                         that I have made with different languages,
                         mostly with JavaScript, and using frameworks like Angular and libraries like React.

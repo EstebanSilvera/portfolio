@@ -5,34 +5,35 @@
     animation: moveAndFade 3s infinite;
 }
 
+.moving-icon2 {
+    position: relative;
+    right: 0;
+    opacity: 0;
+    animation: moveAndFade 1s infinite;
+}
+
 .icon1 {
     animation-delay: 1.2s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 .icon2 {
     animation-delay: 2s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 .icon3 {
     animation-delay: 3s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 .icon4 {
     animation-delay: 1.8s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 .icon5 {
     animation-delay: 2.5s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 .icon3 {
     animation-delay: 3.5s;
-    /* Ajusta el retraso según tus preferencias */
 }
 
 @keyframes moveAndFade {
@@ -47,11 +48,12 @@
     }
 
     100% {
-        left: 90%;
+        left: 100%;
         opacity: 0;
 
     }
 }
+
 
 .letras {
     margin: 0;
@@ -110,3 +112,24 @@
         opacity: 1;
     }
 }
+
+.shake {
+    animation: shake 0.3s infinite alternate;
+  }
+  
+  @keyframes shake{
+    0%  { transform:rotateZ(-5deg); }
+    50% { transform:rotateZ( 0deg) scale(.9); }
+    100%{ transform:rotateZ( 5deg); }
+  }
+
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #06b5d459;
+    box-shadow: 0px 0px 150px 50px #06b6d4;
+    border-radius: 50%;
+    pointer-events: none; /* Evita que el elemento interfiera con los eventos del mouse */
+    z-index: 9999; /* Asegura que el "box shadow" esté por encima de otros elementos */
+  }

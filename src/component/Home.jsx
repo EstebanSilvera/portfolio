@@ -1,7 +1,7 @@
 import React from 'react'
 import gif from '../img/gif-vector2.gif'
 import gifvector from '../img/gif-vector.gif'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io";
 import { SiPostman, SiTailwindcss } from "react-icons/si";
 import { FaCss3Alt, FaBootstrap } from "react-icons/fa";
@@ -14,14 +14,31 @@ const Home = () => {
 
     const [colorRed, setColorRed] = useState(false)
 
+    const [velocidad, setVelocidad] = useState(false)
+
     const cambiar = () => {
         setColorRed(true)
     }
 
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    const updateCursorPosition = (e) => {
+        setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousemove', updateCursorPosition);
+
+        return () => {
+            document.removeEventListener('mousemove', updateCursorPosition);
+        };
+    }, []);
+
     return (
         <div>
+            <div className="cursor z-0" style={{ left: position.x, top: position.y }}></div>
 
-            <div className='container md:mx-auto px-2 md:py-36'>
+            <div className='relative z-50 container md:mx-auto px-2 md:py-36'>
 
                 <div className='container xl:flex xl:justify-evenly xl:items-center'>
 
@@ -73,7 +90,7 @@ const Home = () => {
 
                 <div className='md:flex md:justify-center items-center'>
 
-                    <div className='relative bg-white border-4 border-cyan-500 w-96 h-52 rounded-xl z-50'>
+                    <div className={`${velocidad ? 'shake' : ''} relative bg-white border-4 border-cyan-500 w-96 h-52 rounded-xl z-50`} >
 
                         <img src={gifvector} alt='gif' className='size-40 rounded-full shadow-2xl bottom-28 relative mx-auto border-4 border-cyan-500 ' />
 
@@ -85,29 +102,31 @@ const Home = () => {
 
                     <div className='md:relative md:bottom-8 px-16'>
 
-                        <SiPostman className='moving-icon icon6 text-white size-16 mx-4 absolute top-10 ' />
+                        <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon '} icon6 text-white size-16 mx-4 absolute top-10`} />
 
-                        <IoLogoJavascript className='moving-icon icon2 text-white size-16 mx-4 ' />
+                        <IoLogoJavascript className={`${velocidad ? 'moving-icon2' : 'moving-icon'} text-white size-16 mx-4 `} />
 
-                        <FaCss3Alt className='moving-icon icon3 text-white size-16 mx-4 absolute top-10 ' />
+                        <FaCss3Alt className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4 absolute top-10 `} />
 
-                        <IoLogoHtml5 className='moving-icon icon4 text-white size-16 mx-4 absolute' />
+                        <IoLogoHtml5 className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon4 text-white size-16 mx-4 absolute`} />
 
                         <Link to="/repositories">
                             <button
+                                onMouseEnter={() => setVelocidad(true)}
+                                onMouseLeave={() => setVelocidad(false)}
                                 className='relative text-xl bg-cyan-500 hover:bg-cyan-300 text-white hover:text-black font-bold py-4 px-20 rounded transition-all duration-500 transform hover:scale-105 z-50'
                             >
                                 Repositories
                             </button>
                         </Link>
 
-                        <SiPostman className='moving-icon icon2 text-white size-16 mx-4 absolute top-10 z-0' />
+                        <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon2 text-white size-16 mx-4 absolute`} />
 
-                        <SiTailwindcss className='moving-icon icon5 text-white size-16 mx-4 absolute ' />
+                        <SiTailwindcss className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon5 text-white size-16 mx-4 absolute`} />
 
-                        <FaBootstrap className='moving-icon icon1 text-white size-16 mx-4 absolute ' />
+                        <FaBootstrap className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon1 text-white size-16 mx-4 absolute`} />
 
-                        <GrMysql className='moving-icon icon3 text-white size-16 mx-4 absolute ' />
+                        <GrMysql className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4 absolute`} />
 
 
                     </div>
