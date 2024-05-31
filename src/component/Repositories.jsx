@@ -1,14 +1,14 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import pokedex from '../img/pokedex.png'
-import autoincrementar from "../img/autoincrementar.png"
 import games from "../img/games.png"
 import inventario from "../img/inventario.png"
 import angular from "../img/angular.png"
 import covid from "../img/covid.png"
 import presentation from "../img/present.gif"
 import fondo from "../img/fondo.jpg"
+import { FaReact, FaBootstrap } from "react-icons/fa";
+import { SiAxios } from "react-icons/si";
 
 
 const Repositories = () => {
@@ -28,15 +28,30 @@ const Repositories = () => {
         };
     }, []);
 
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    const updateCursorPosition = (e) => {
+        setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousemove', updateCursorPosition);
+
+        return () => {
+            document.removeEventListener('mousemove', updateCursorPosition);
+        };
+    }, []);
+
     return (
         <div>
+            <div className="cursor z-0" style={{ left: position.x, top: position.y }}></div>
 
-            <div className='md:flex justify-center items-center p-20 ' style={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <div  className='md:flex justify-center items-center p-20 relative z-50' style={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover", backgroundPosition: "center" }} >
 
 
                 <div className='bg-white w-72 rounded-2xl relative md:bottom-24'>
 
-                    <p className='overflow-hidden whitespace-normal break-words p-6 text-center'>
+                    <p className='overflow-hidden whitespace-normal break-words p-6 text-balance'>
                         hello, here you can see all the repositories and applications
                         that I have made with different languages,
                         mostly with JavaScript, and using frameworks like Angular and libraries like React.
@@ -44,7 +59,7 @@ const Repositories = () => {
 
                 </div>
 
-                {window.innerWidth <= 768
+                {isMobile
                     ?
                     <svg className='relative left-20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="35" height="35">
                         <path d="M0 0 L5 10 L10 0 Z" fill="white" />
@@ -65,7 +80,7 @@ const Repositories = () => {
 
 
 
-            <div className='container mx-auto flex flex-wrap justify-evenly items-center m-5'>
+            <div className='container mx-auto flex flex-wrap justify-evenly items-center m-5 relative z-50'>
 
                 <Link to="https://pokedex-mu-sepia.vercel.app/" className='py-4'>
                     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
@@ -75,19 +90,13 @@ const Repositories = () => {
                             <h2 className="font-semibold text-xl mb-2">pokedex with tablet</h2>
                             <p className="text-gray-600">This is the first application consuming the Pokémon API, and I added the pokedex to see the pokemon with their powers</p>
                         </div>
-                    </div>
-                </Link>
-
-                <Link to="https://contador-alpha-coral.vercel.app/" className='py-4'>
-                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
-                        {/* Contenido de la tarjeta */}
-                        <img className="w-full h-32 md:h-48 object-cover object-center" src={autoincrementar} alt="Imagen de la tarjeta" />
-                        <div className="p-6">
-                            <h2 className="font-semibold text-xl mb-2">Auto-incrementing counter</h2>
-                            <p className="text-gray-600">Was one of the first applications I made with react using hooks such as useState and useEffect.</p>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaReact className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
                         </div>
                     </div>
                 </Link>
+
 
                 <Link to="https://games-mocha-six.vercel.app/" className='py-4'>
                     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">

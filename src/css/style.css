@@ -98,9 +98,20 @@
 }
 
 .aparecer {
-    animation-duration: 5s;
+    opacity: 0;
     animation-name: aparicion;
-    animation-delay: hidden 10s ;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+.aparecer2 {
+    opacity: 0;
+    animation-name: aparicion;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes aparicion {
@@ -115,21 +126,31 @@
 
 .shake {
     animation: shake 0.3s infinite alternate;
-  }
-  
-  @keyframes shake{
-    0%  { transform:rotateZ(-5deg); }
-    50% { transform:rotateZ( 0deg) scale(.9); }
-    100%{ transform:rotateZ( 5deg); }
-  }
+}
 
-  .cursor {
+@keyframes shake {
+    0% {
+        transform: rotateZ(-5deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg) scale(.9);
+    }
+
+    100% {
+        transform: rotateZ(5deg);
+    }
+}
+
+.cursor {
     position: fixed;
     width: 20px;
     height: 20px;
     background-color: #06b5d459;
     box-shadow: 0px 0px 150px 50px #06b6d4;
     border-radius: 50%;
-    pointer-events: none; /* Evita que el elemento interfiera con los eventos del mouse */
-    z-index: 9999; /* Asegura que el "box shadow" esté por encima de otros elementos */
-  }
+    pointer-events: none;
+    /* Evita que el elemento interfiera con los eventos del mouse */
+    z-index: 9999;
+    /* Asegura que el "box shadow" esté por encima de otros elementos */
+}

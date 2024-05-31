@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import img from "../img/foto.png"
 import binario from "../img/binario.gif"
@@ -29,8 +28,6 @@ const Aboutme = () => {
 
   const [isDown, setIsDown] = useState(window.innerWidth <= 1536);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1536);
-
   const handleResize = () => {
     setIsDown(window.innerWidth <= 1536);
   };
@@ -52,9 +49,23 @@ const Aboutme = () => {
         prevIcons[prevIcons.length - 1],
         ...prevIcons.slice(0, prevIcons.length - 1),
       ]);
-    }, 3000); 
+    }, 3000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const updateCursorPosition = (e) => {
+    setPosition({ x: e.clientX, y: e.clientY });
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousemove', updateCursorPosition);
+
+    return () => {
+      document.removeEventListener('mousemove', updateCursorPosition);
+    };
   }, []);
 
 
@@ -62,11 +73,13 @@ const Aboutme = () => {
   return (
     <div>
 
-      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10 px-2 movimientoRev'>
+      <div className="cursor z-0" style={{ left: position.x, top: position.y }}></div>
+
+      <div className='container md:flex md:justify-evenly md:items-center mx-auto md:p-10 px-2 movimientoRev relative z-50'>
 
 
         {/* Experiencias */}
-        <div className={`w-96 ${isMobile ? "py-10" : ""} `}>
+        <div className={`w-96 ${isDown ? "py-10" : ""} `}>
           <h1 className='text-4xl text-center text-cyan-500'>EXPERIENCE AND ACHIVETMENST</h1>
 
           <div className='text-white'>
@@ -75,7 +88,7 @@ const Aboutme = () => {
             </div>
 
             <div className='flex py-1'>
-              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Creation of the "Inventario" web application for the company Automotive Fujiyama.</h3>
+              <FaRegHandPointRight className='size-6 px-1' /><h3 className='size-full'>Creation of the Inventario web application for the company Automotive Fujiyama.</h3>
             </div>
 
             <div className='flex py-1'>
@@ -138,6 +151,10 @@ const Aboutme = () => {
 
         ?
         <>
+          <div className='flex justify-center items-center'>
+          <div className="aparecer2 md:absolute md:w-96 md:h-96 border-2 border-cyan-500 bg-cyan-500 rounded-full z-0 blur-2xl " style={{ top: "500px" }}></div>
+          </div>
+
           <div className="aparecer 2xl:absolute 2xl:border-2 border-white 2xl:h-60 z-50" style={{ top: "435px", right: "29.5vw" }}></div>
           <div className="aparecer 2xl:absolute 2xl:border-2 border-white z-50" style={{ width: "11vw", top: "675px", right: "29.5vw" }}></div>
 
@@ -172,8 +189,6 @@ const Aboutme = () => {
       {/* Centro de las imagenes */}
       <div className='container flex justify-center mx-auto text-white p-10 '>
 
-        <div className="aparecer md:absolute md:w-96 md:h-96 border-2 border-cyan-500 bg-cyan-500 rounded-full z-0 blur-2xl " style={{ top: "500px" }}> </div>
-
         <div className='p-5 z-50'>
           <FaHeadphonesAlt className='size-20 my-5' />
           <FaBook className='size-20' />
@@ -193,7 +208,7 @@ const Aboutme = () => {
       </div>
 
 
-      <div className='md:flex md:justify-evenly md:items-center md:p-28 px-2'>
+      <div className='md:flex md:justify-evenly md:items-center md:p-28 px-2 relative z-50'>
 
         <div className='w-96'>
           <h1 className='text-4xl text-cyan-500 py-5'>HOBBIES</h1>
@@ -240,7 +255,7 @@ const Aboutme = () => {
 
         </div>
 
-        <div className={`w-96 ${isMobile ? "py-10" : ""}`}>
+        <div className={`w-96 ${isDown ? "py-10" : ""}`}>
           <h1 className='text-4xl text-cyan-500 '>SKILLS</h1>
 
           <h2 className='text-white py-4'>Some skills of mine</h2>

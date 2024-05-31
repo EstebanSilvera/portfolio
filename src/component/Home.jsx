@@ -1,4 +1,3 @@
-import React from 'react'
 import gif from '../img/gif-vector2.gif'
 import gifvector from '../img/gif-vector.gif'
 import { useState, useEffect } from 'react';
@@ -71,12 +70,14 @@ const Home = () => {
                         <div className='relative z-40'>
 
                             <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm -top-[5vw] right-[10vw]"></div>
+
                             <div className={`rounded-2xl shadow-2xl ${!colorRed ? 'hover:shadow-white' : "shadow-cyan-500"} transition duration-700 w-full `}>
 
                                 <img src={gif} alt='gif' onMouseEnter={() => setColorRed(false)} className='relative rounded-2xl w-full z-50' />
 
                             </div>
-                            <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm top-[5vw] -right-[5vw] "> </div>
+
+                            <div className="md:absolute md:w-96 md:h-96 border-2 border-cyan-500 rounded-2xl z-0 blur-sm top-[5vw] 2xl:-right-[5vw] -right-[1vw] "> </div>
                         </div>
 
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import { TbHexagonLetterE } from "react-icons/tb";
 
@@ -74,19 +73,19 @@ const Header = () => {
 
                         <div className={`text-xl flex ${isOpen ? 'flex-col' : ''}  items-center justify-center`}>
 
-                            <a href='/' className="text-white hover:text-gray-400 px-2 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline">
+                            <a href='/' className="text-white hover:text-gray-400 px-5 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline">
                                 Home
                             </a>
 
                             <a
                                 href="/aboutme"
-                                className="text-white hover:text-gray-400 px-2 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline"
+                                className="text-white hover:text-gray-400 px-5 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline"
                             >
                                 about me
                             </a>
                             <a
                                 href="/repositories"
-                                className="text-white hover:text-gray-400 px-2 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline"
+                                className="text-white hover:text-gray-400 px-5 py-2 transition duration-300 ease-in-out hover:scale-110 hover:underline"
                             >
                                 Repositories
                             </a>
