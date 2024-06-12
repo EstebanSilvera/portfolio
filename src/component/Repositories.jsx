@@ -7,8 +7,9 @@ import angular from "../img/angular.png"
 import covid from "../img/covid.png"
 import presentation from "../img/present.gif"
 import fondo from "../img/fondo.jpg"
-import { FaReact, FaBootstrap } from "react-icons/fa";
-import { SiAxios } from "react-icons/si";
+import sufi from "../img/sufi.png"
+import { FaReact, FaBootstrap, FaAngular } from "react-icons/fa";
+import { SiAxios, SiTailwindcss, SiVite } from "react-icons/si";
 
 
 const Repositories = () => {
@@ -88,7 +89,7 @@ const Repositories = () => {
                         <img className="w-full h-32 md:h-48 object-cover object-center" src={pokedex} alt="Imagen de la tarjeta" />
                         <div className="p-6">
                             <h2 className="font-semibold text-xl mb-2">pokedex with tablet</h2>
-                            <p className="text-gray-600">This is the first application consuming the Pokémon API, and I added the pokedex to see the pokemon with their powers</p>
+                            <p className="text-gray-600">This is the first application consuming the Pokémon API, and I added the pokedex to see the pokemon with their powers and add music, using show modal and design responsive.</p>
                         </div>
                         <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
                         <div className="px-6 pb-3 flex justify-start items-start">
@@ -106,6 +107,10 @@ const Repositories = () => {
                             <h2 className="font-semibold text-xl mb-2">Gamer computer equipment store</h2>
                             <p className="text-gray-600">It is a store which I added my first swisper and a responsive video. I think later I can add more features like a shopping cart and prices to all items, all this for any type of device without damaging the experience.</p>
                         </div>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaReact className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
+                        </div>
                     </div>
                 </Link>
 
@@ -117,6 +122,25 @@ const Repositories = () => {
                             <h2 className="font-semibold text-xl mb-2">Inventory of computer and network equipment</h2>
                             <p className="text-gray-600 overflow-hidden whitespace-normal break-words">This was the biggest project I have done and one of the most complete, it was one of the projects that I was implementing in a company in which I did business practices, which worked with a database with nodejs for connections, creating APIs.</p>
                         </div>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaReact className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
+                        </div>
+                    </div>
+                </Link>
+
+                <Link to="https://sufifront.vercel.app/" className='py-4'>
+                    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
+                        {/* Contenido de la tarjeta */}
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src={sufi} alt="Imagen de la tarjeta" />
+                        <div className="p-6">
+                            <h2 className="font-semibold text-xl mb-2">Frontend test</h2>
+                            <p className="text-gray-600">This was a test that I took at the RED5G company to be able to enter as a frontend developer and it was to replicate an Adobe XD that they sent us so I could show my web layout skills.</p>
+                        </div>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaAngular className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' /> <SiTailwindcss className='size-12 mx-6' /><SiVite  className='size-12 mx-6' />
+                        </div>
                     </div>
                 </Link>
 
@@ -126,7 +150,11 @@ const Repositories = () => {
                         <img className="w-full h-32 md:h-48 object-cover object-center" src={angular} alt="Imagen de la tarjeta" />
                         <div className="p-6">
                             <h2 className="font-semibold text-xl mb-2">First application with Angular</h2>
-                            <p className="text-gray-600">This application was made with a seed project which taught us the basics and everything we needed to consume APIs in angular and the handling of the components. Using boostrap for design</p>
+                            <p className="text-gray-600">This application was made with a seed project which taught us the basics and everything we needed to consume APIs in angular and the handling of the components. Using boostrap for design.</p>
+                        </div>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaAngular className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
                         </div>
                     </div>
                 </Link>
@@ -139,6 +167,10 @@ const Repositories = () => {
                         <div className="p-6">
                             <h2 className="font-semibold text-xl mb-2">Covid test</h2>
                             <p className="text-gray-600">this was a test I had by consuming an excel which had covid information for the whole united states and made a filter for each state and city with graphical representation, the excel is in my github.</p>
+                        </div>
+                        <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
+                        <div className="px-6 pb-3 flex justify-start items-start">
+                            <FaAngular className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
                         </div>
                     </div>
                 </Link>

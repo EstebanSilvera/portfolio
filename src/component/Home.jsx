@@ -89,51 +89,55 @@ const Home = () => {
 
             <div className='container md:mx-auto px-2 my-[40vh]'>
 
-                <div className='md:flex md:justify-center items-center'>
+                <section className='flex justify-center'>
+                    <div className='md:flex md:justify-center md:items-center sm:flex sm:justify-center'>
 
-                    <div className={`${velocidad ? 'shake' : ''} relative bg-white border-4 border-cyan-500 w-96 h-52 rounded-xl z-50`} >
 
-                        <img src={gifvector} alt='gif' className='size-40 rounded-full shadow-2xl bottom-28 relative mx-auto border-4 border-cyan-500 ' />
+                        <div className={`${velocidad ? 'shake' : ''} relative bg-white border-4 border-cyan-500 w-96 h-52 rounded-xl z-50`} >
 
-                        <p className='text-center relative bottom-24 px-5'>
-                            I have created these repositories with imagination and they were some of my beginnings as a frontend and backend
-                        </p>
+                            <img src={gifvector} alt='gif' className='size-40 rounded-full shadow-2xl bottom-28 relative mx-auto border-4 border-cyan-500 ' />
+
+                            <p className='text-center relative bottom-24 px-5'>
+                                I have created these repositories with imagination and they were some of my beginnings as a frontend and backend
+                            </p>
+
+                        </div>
+
+
+                        <div className='md:relative md:bottom-8 px-16 max-w-96  min-h-80 '>
+
+                            <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon '} icon1 text-white size-16 mx-4  `} />
+
+                            <IoLogoJavascript className={`${velocidad ? 'moving-icon2' : 'moving-icon'} text-white size-16 mx-4 `} />
+
+                            <FaCss3Alt className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4  `} />
+
+                            <IoLogoHtml5 className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon4 text-white size-16 mx-4 `} />
+
+                            <Link to="/repositories">
+                                <button
+                                    onMouseEnter={() => setVelocidad(true)}
+                                    onMouseLeave={() => setVelocidad(false)}
+                                    className='relative text-xl bg-cyan-500 hover:bg-cyan-300 text-white hover:text-black font-bold py-4 px-20 rounded transition-all duration-500 transform hover:scale-105 z-50'
+                                >
+                                    Repositories
+                                </button>
+                            </Link>
+
+                            <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon2 text-white size-16 mx-4 `} />
+
+                            <SiTailwindcss className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon5 text-white size-16 mx-4 `} />
+
+                            <FaBootstrap className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon1 text-white size-16 mx-4 `} />
+
+                            <GrMysql className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4 `} />
+
+
+                        </div>
 
                     </div>
 
-                    <div className='md:relative md:bottom-8 px-16'>
-
-                        <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon '} icon6 text-white size-16 mx-4 absolute top-10`} />
-
-                        <IoLogoJavascript className={`${velocidad ? 'moving-icon2' : 'moving-icon'} text-white size-16 mx-4 `} />
-
-                        <FaCss3Alt className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4 absolute top-10 `} />
-
-                        <IoLogoHtml5 className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon4 text-white size-16 mx-4 absolute`} />
-
-                        <Link to="/repositories">
-                            <button
-                                onMouseEnter={() => setVelocidad(true)}
-                                onMouseLeave={() => setVelocidad(false)}
-                                className='relative text-xl bg-cyan-500 hover:bg-cyan-300 text-white hover:text-black font-bold py-4 px-20 rounded transition-all duration-500 transform hover:scale-105 z-50'
-                            >
-                                Repositories
-                            </button>
-                        </Link>
-
-                        <SiPostman className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon2 text-white size-16 mx-4 absolute`} />
-
-                        <SiTailwindcss className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon5 text-white size-16 mx-4 absolute`} />
-
-                        <FaBootstrap className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon1 text-white size-16 mx-4 absolute`} />
-
-                        <GrMysql className={`${velocidad ? 'moving-icon2' : 'moving-icon'} icon3 text-white size-16 mx-4 absolute`} />
-
-
-                    </div>
-
-                </div>
-
+                </section>
 
 
             </div>
