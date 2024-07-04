@@ -10,6 +10,7 @@ import fondo from "../img/fondo.jpg"
 import sufi from "../img/sufi.png"
 import { FaReact, FaBootstrap, FaAngular } from "react-icons/fa";
 import { SiAxios, SiTailwindcss, SiVite } from "react-icons/si";
+import { DiMaterializecss } from "react-icons/di";
 
 
 const Repositories = () => {
@@ -99,17 +100,17 @@ const Repositories = () => {
                 </Link>
 
 
-                <Link to="https://games-mocha-six.vercel.app/" className='py-4'>
+                <Link to="https://empremrec.vercel.app/" className='py-4'>
                     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
                         {/* Contenido de la tarjeta */}
-                        <img className="w-full h-32 md:h-48 object-cover object-center" src={games} alt="Imagen de la tarjeta" />
+                        <img className="w-full h-32 md:h-48 object-cover object-center" src="https://www.stelorder.com/wp-content/uploads/2021/09/portada-empresa.jpg" alt="Imagen de la tarjeta" />
                         <div className="p-6">
-                            <h2 className="font-semibold text-xl mb-2">Gamer computer equipment store</h2>
-                            <p className="text-gray-600">It is a store which I added my first swisper and a responsive video. I think later I can add more features like a shopping cart and prices to all items, all this for any type of device without damaging the experience.</p>
+                            <h2 className="font-semibold text-xl mb-2">My design of enterprise</h2>
+                            <p className="text-gray-600">Our company is dedicated to pioneering advancements in technology and renewable energy. We aim to develop innovative solutions that harness the power of cutting-edge technology to create sustainable and efficient energy sources. </p>
                         </div>
                         <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
                         <div className="px-6 pb-3 flex justify-start items-start">
-                            <FaReact className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' />
+                            <FaReact className='size-12 mx-6' /><SiAxios className='size-12 mx-6' /><SiTailwindcss className='size-12 mx-6' /><SiVite  className='size-12 mx-6' /><DiMaterializecss   className='size-12 mx-6' />
                         </div>
                     </div>
                 </Link>
@@ -139,7 +140,7 @@ const Repositories = () => {
                         </div>
                         <h2 className="font-semibold text-xl mb-2 px-6 pb-3">🛠 Language and tools</h2>
                         <div className="px-6 pb-3 flex justify-start items-start">
-                            <FaAngular className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' /> <SiTailwindcss className='size-12 mx-6' /><SiVite  className='size-12 mx-6' />
+                            <FaReact className='size-12 mx-6' /><FaBootstrap className='size-12 mx-6' /><SiAxios className='size-12 mx-6' /> <SiTailwindcss className='size-12 mx-6' /><SiVite  className='size-12 mx-6' />
                         </div>
                     </div>
                 </Link>
